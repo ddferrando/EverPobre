@@ -12,6 +12,13 @@
 		ADDC3CF51A7F9183003CD3FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDC3CF41A7F9183003CD3FB /* Images.xcassets */; };
 		ADDC3CF81A7F9183003CD3FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADDC3CF61A7F9183003CD3FB /* LaunchScreen.xib */; };
 		ADDC3D041A7F9184003CD3FB /* EverPobreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D031A7F9184003CD3FB /* EverPobreTests.m */; };
+		ADDC3D0F1A7F957C003CD3FB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D0D1A7F957C003CD3FB /* Model.xcdatamodeld */; };
+		ADDC3D391A7FAB5B003CD3FB /* _DVDNote.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D2E1A7FAB5B003CD3FB /* _DVDNote.m */; };
+		ADDC3D3A1A7FAB5B003CD3FB /* _DVDNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D301A7FAB5B003CD3FB /* _DVDNotebook.m */; };
+		ADDC3D3B1A7FAB5B003CD3FB /* _DVDPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D321A7FAB5B003CD3FB /* _DVDPhotoContainer.m */; };
+		ADDC3D3C1A7FAB5B003CD3FB /* DVDNote.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D341A7FAB5B003CD3FB /* DVDNote.m */; };
+		ADDC3D3D1A7FAB5B003CD3FB /* DVDNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D361A7FAB5B003CD3FB /* DVDNotebook.m */; };
+		ADDC3D3E1A7FAB5B003CD3FB /* DVDPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D381A7FAB5B003CD3FB /* DVDPhotoContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,19 @@
 		ADDC3CFD1A7F9184003CD3FB /* EverPobreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverPobreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDC3D021A7F9184003CD3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADDC3D031A7F9184003CD3FB /* EverPobreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverPobreTests.m; sourceTree = "<group>"; };
+		ADDC3D0E1A7F957C003CD3FB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		ADDC3D2D1A7FAB5B003CD3FB /* _DVDNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVDNote.h; sourceTree = "<group>"; };
+		ADDC3D2E1A7FAB5B003CD3FB /* _DVDNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DVDNote.m; sourceTree = "<group>"; };
+		ADDC3D2F1A7FAB5B003CD3FB /* _DVDNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVDNotebook.h; sourceTree = "<group>"; };
+		ADDC3D301A7FAB5B003CD3FB /* _DVDNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DVDNotebook.m; sourceTree = "<group>"; };
+		ADDC3D311A7FAB5B003CD3FB /* _DVDPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVDPhotoContainer.h; sourceTree = "<group>"; };
+		ADDC3D321A7FAB5B003CD3FB /* _DVDPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DVDPhotoContainer.m; sourceTree = "<group>"; };
+		ADDC3D331A7FAB5B003CD3FB /* DVDNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDNote.h; sourceTree = "<group>"; };
+		ADDC3D341A7FAB5B003CD3FB /* DVDNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDNote.m; sourceTree = "<group>"; };
+		ADDC3D351A7FAB5B003CD3FB /* DVDNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDNotebook.h; sourceTree = "<group>"; };
+		ADDC3D361A7FAB5B003CD3FB /* DVDNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDNotebook.m; sourceTree = "<group>"; };
+		ADDC3D371A7FAB5B003CD3FB /* DVDPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDPhotoContainer.h; sourceTree = "<group>"; };
+		ADDC3D381A7FAB5B003CD3FB /* DVDPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDPhotoContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +101,7 @@
 				ADDC3CF41A7F9183003CD3FB /* Images.xcassets */,
 				ADDC3CF61A7F9183003CD3FB /* LaunchScreen.xib */,
 				ADDC3CED1A7F9183003CD3FB /* Supporting Files */,
+				ADDC3D101A7F9595003CD3FB /* Models */,
 			);
 			path = EverPobre;
 			sourceTree = "<group>";
@@ -109,6 +130,34 @@
 				ADDC3D021A7F9184003CD3FB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADDC3D101A7F9595003CD3FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC3D0D1A7F957C003CD3FB /* Model.xcdatamodeld */,
+				ADDC3D3F1A7FABDC003CD3FB /* CoreData_Machina */,
+				ADDC3D331A7FAB5B003CD3FB /* DVDNote.h */,
+				ADDC3D341A7FAB5B003CD3FB /* DVDNote.m */,
+				ADDC3D351A7FAB5B003CD3FB /* DVDNotebook.h */,
+				ADDC3D361A7FAB5B003CD3FB /* DVDNotebook.m */,
+				ADDC3D371A7FAB5B003CD3FB /* DVDPhotoContainer.h */,
+				ADDC3D381A7FAB5B003CD3FB /* DVDPhotoContainer.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ADDC3D3F1A7FABDC003CD3FB /* CoreData_Machina */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC3D2D1A7FAB5B003CD3FB /* _DVDNote.h */,
+				ADDC3D2E1A7FAB5B003CD3FB /* _DVDNote.m */,
+				ADDC3D2F1A7FAB5B003CD3FB /* _DVDNotebook.h */,
+				ADDC3D301A7FAB5B003CD3FB /* _DVDNotebook.m */,
+				ADDC3D311A7FAB5B003CD3FB /* _DVDPhotoContainer.h */,
+				ADDC3D321A7FAB5B003CD3FB /* _DVDPhotoContainer.m */,
+			);
+			name = CoreData_Machina;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +204,7 @@
 		ADDC3CE21A7F9183003CD3FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DVD;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "david martínez ferrando";
 				TargetAttributes = {
@@ -210,8 +260,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDC3D3E1A7FAB5B003CD3FB /* DVDPhotoContainer.m in Sources */,
+				ADDC3D391A7FAB5B003CD3FB /* _DVDNote.m in Sources */,
 				ADDC3CF31A7F9183003CD3FB /* AppDelegate.m in Sources */,
 				ADDC3CF01A7F9183003CD3FB /* main.m in Sources */,
+				ADDC3D3B1A7FAB5B003CD3FB /* _DVDPhotoContainer.m in Sources */,
+				ADDC3D3A1A7FAB5B003CD3FB /* _DVDNotebook.m in Sources */,
+				ADDC3D3C1A7FAB5B003CD3FB /* DVDNote.m in Sources */,
+				ADDC3D0F1A7F957C003CD3FB /* Model.xcdatamodeld in Sources */,
+				ADDC3D3D1A7FAB5B003CD3FB /* DVDNotebook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +461,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ADDC3D0D1A7F957C003CD3FB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ADDC3D0E1A7F957C003CD3FB /* Model.xcdatamodel */,
+			);
+			currentVersion = ADDC3D0E1A7F957C003CD3FB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ADDC3CE21A7F9183003CD3FB /* Project object */;
 }
