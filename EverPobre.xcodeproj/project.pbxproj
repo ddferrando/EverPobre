@@ -19,6 +19,7 @@
 		ADDC3D3C1A7FAB5B003CD3FB /* DVDNote.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D341A7FAB5B003CD3FB /* DVDNote.m */; };
 		ADDC3D3D1A7FAB5B003CD3FB /* DVDNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D361A7FAB5B003CD3FB /* DVDNotebook.m */; };
 		ADDC3D3E1A7FAB5B003CD3FB /* DVDPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D381A7FAB5B003CD3FB /* DVDPhotoContainer.m */; };
+		ADDC3D501A8022A6003CD3FB /* DVDMyManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3D4F1A8022A6003CD3FB /* DVDMyManagedObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		ADDC3D361A7FAB5B003CD3FB /* DVDNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDNotebook.m; sourceTree = "<group>"; };
 		ADDC3D371A7FAB5B003CD3FB /* DVDPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDPhotoContainer.h; sourceTree = "<group>"; };
 		ADDC3D381A7FAB5B003CD3FB /* DVDPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDPhotoContainer.m; sourceTree = "<group>"; };
+		ADDC3D4E1A8022A6003CD3FB /* DVDMyManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDMyManagedObject.h; sourceTree = "<group>"; };
+		ADDC3D4F1A8022A6003CD3FB /* DVDMyManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDMyManagedObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				ADDC3D361A7FAB5B003CD3FB /* DVDNotebook.m */,
 				ADDC3D371A7FAB5B003CD3FB /* DVDPhotoContainer.h */,
 				ADDC3D381A7FAB5B003CD3FB /* DVDPhotoContainer.m */,
+				ADDC3D4E1A8022A6003CD3FB /* DVDMyManagedObject.h */,
+				ADDC3D4F1A8022A6003CD3FB /* DVDMyManagedObject.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				ADDC3D3E1A7FAB5B003CD3FB /* DVDPhotoContainer.m in Sources */,
 				ADDC3D391A7FAB5B003CD3FB /* _DVDNote.m in Sources */,
 				ADDC3CF31A7F9183003CD3FB /* AppDelegate.m in Sources */,
+				ADDC3D501A8022A6003CD3FB /* DVDMyManagedObject.m in Sources */,
 				ADDC3CF01A7F9183003CD3FB /* main.m in Sources */,
 				ADDC3D3B1A7FAB5B003CD3FB /* _DVDPhotoContainer.m in Sources */,
 				ADDC3D3A1A7FAB5B003CD3FB /* _DVDNotebook.m in Sources */,
@@ -451,6 +457,7 @@
 				ADDC3D091A7F9184003CD3FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADDC3D0A1A7F9184003CD3FB /* Build configuration list for PBXNativeTarget "EverPobreTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +466,7 @@
 				ADDC3D0C1A7F9184003CD3FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

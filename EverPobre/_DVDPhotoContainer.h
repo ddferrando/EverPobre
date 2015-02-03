@@ -2,6 +2,7 @@
 // Make changes to DVDPhotoContainer.h instead.
 
 @import CoreData;
+#import "DVDMyManagedObject.h"
 
 extern const struct DVDPhotoContainerAttributes {
 	__unsafe_unretained NSString *photoData;
@@ -16,7 +17,7 @@ extern const struct DVDPhotoContainerRelationships {
 @interface DVDPhotoContainerID : NSManagedObjectID {}
 @end
 
-@interface _DVDPhotoContainer : NSManagedObject {}
+@interface _DVDPhotoContainer : DVDMyManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

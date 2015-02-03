@@ -23,53 +23,18 @@
     return noteBook;
 }
 
-
-#pragma mark - Lifecycle
--(void) awakeFromInsert{
-    [super awakeFromInsert];
-    
-    [self setUpKVO];
-}
-
--(void) awakeFromFetch{
-    [super awakeFromFetch];
-    
-    [self setUpKVO];
-}
-    
--(void) willTurnIntoFault{
-    [super willTurnIntoFault];
-    
-    [self tearDownKVO];
-}
+#pragma mark - lifeCycle
+//info: amb mogenerator fem que les classes màquines heredin de la meva classe (que alhora ereda de NSManagedObject) i així posar codi comú i utilitats que ens serveixin per totes les clases i no haver de repetir codi
+//implementats en el DVDMyManagedObject els mètodes [awakeFromInsert, awakeFromFetch, willTurnIntoFault{]
 
 
 #pragma mark - Utils
 -(NSArray *) obsevableKeys{
-    return @[DVDNotebookAttributes.name, DVDNotebookRelationships.notes];
+    return @[DVDNotebookAttributes.name,
+             DVDNotebookRelationships.notes];
 }
 
 #pragma mark - KVO
--(void) setUpKVO{
-    //ens donem d'alta en el KVO per enviar el missatge que volguem
-    
-    for (NSString *key in [self obsevableKeys]){
-    [self addObserver:self
-           forKeyPath:key
-              options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-              context:NULL];
-    }
-}
-
--(void) tearDownKVO{
-    //ens donem de baixa de KVO - totes les lliste d'spam 
-    
-    for (NSString *key in [self obsevableKeys]){
-        [self removeObserver:self
-                  forKeyPath:key];
-    }
-}
-
 -(void) observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary *)change
@@ -77,15 +42,6 @@
     
     //aquí només ens interessa saebr que alguna cosa ha canviat
     self.modificationDate = [NSDate date];
-    
 }
-
-
-
-
-
-
-
-
 
 @end

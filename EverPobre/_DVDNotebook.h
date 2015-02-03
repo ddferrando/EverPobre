@@ -2,6 +2,7 @@
 // Make changes to DVDNotebook.h instead.
 
 @import CoreData;
+#import "DVDMyManagedObject.h"
 
 extern const struct DVDNotebookAttributes {
 	__unsafe_unretained NSString *creationDate;
@@ -18,7 +19,7 @@ extern const struct DVDNotebookRelationships {
 @interface DVDNotebookID : NSManagedObjectID {}
 @end
 
-@interface _DVDNotebook : NSManagedObject {}
+@interface _DVDNotebook : DVDMyManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
