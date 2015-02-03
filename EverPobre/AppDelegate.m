@@ -7,15 +7,27 @@
 //
 
 #import "AppDelegate.h"
+#import "DVDCoreDataStack.h"
+#import "DVDNote.h"
+#import "DVDNotebook.h"
+#import "DVDPhotoContainer.h"
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) DVDCoreDataStack *stack;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //creem l'stack
+    self.stack = [DVDCoreDataStack coreDataStackWithModelName:@"Model"];
+    [self createDummyData];
+    
+    [self trastearConDatos];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -45,4 +57,105 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - utils
+
+-(void) createDummyData{
+    
+    //primer eliminem totes les dades per que no se'ns vagin acumilant les dades
+    [self.stack zapAllData];
+    
+    //creem una llibreta
+    DVDNotebook *nb = [DVDNotebook noteBookWithName:@"Llibreta 1" context:self.stack.context];
+    
+    //creem vàries notes
+    [DVDNote noteWithName:@"Nota 1" notebook:nb context:self.stack.context];
+    [DVDNote noteWithName:@"Nota 2" notebook:nb context:self.stack.context];
+    [DVDNote noteWithName:@"Nota 3" notebook:nb context:self.stack.context];
+    
+
+}
+
+-(void) trastearConDatos{
+    
+    DVDNotebook *nb = [DVDNotebook noteBookWithName:@"Llibreta 2" context:self.stack.context];
+    
+    DVDNote *idees = [DVDNote noteWithName:@"Idea 1" notebook:nb context:self.stack.context];
+    
+    //comprovem l'actualització modification date
+    NSLog(@"Inicial; %@", idees.modificationDate);
+    
+    idees.text = @"crear una app";
+    
+    NSLog(@"Modificada; %@", idees.modificationDate);
+    
+    //cerca totes les notes
+    NSFetchRequest * r = [NSFetchRequest fetchRequestWithEntityName:[DVDNote entityName]];
+    
+    //només limitat a que llegeidi de 20 en 20 per ajudar a adminstrar la memòria
+    r.fetchBatchSize = 20;
+    
+    //ordenat per no ascendent i la data no
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DVDNoteAttributes.name
+                                                        ascending:YES
+                                                         selector:@selector(caseInsensitiveCompare:)],
+                          [NSSortDescriptor sortDescriptorWithKey:DVDNoteAttributes.modificationDate
+                                                        ascending:NO]];
+    
+    //apliquem un predicat per filtrar els continguts que compleixin el predicat i deixar fora
+    
+    r.predicate = [NSPredicate predicateWithFormat:@"notebook == %@", nb];
+    //NSPredicate -- estudiar-los
+    
+    
+    NSError *err = nil;
+    
+    NSArray *res = [self.stack.context executeFetchRequest:r
+                                                     error:&err];
+    
+    
+    if (res == nil) {
+        NSLog(@"Error al cercar %@", err);
+    }
+    
+    NSLog(@"Numero de notes: %lu", (unsigned long)[res count]);
+    
+    NSLog(@"Classe: %@", [res class]);
+    
+    
+    //esborar un element
+    [self.stack.context deleteObject:nb];
+                          
+                          
+    //exercici -- crear un mètode a la classe de l'stack el mètode executeFetchRequest:r withErrorBlock:&err];
+    // de la mateixa forma que ho fa el mètode //tant la cerca com el desat pot generar un error
+    // -(void) saveWithErrorBlock: (void(^)(NSError *error))errorBlock;
+    
+    
+    if(res == nil){
+        NSLog(@"Error en la cerca %@", err);
+    }
+    
+    NSLog(@"Numero de notes: %lu", (unsigned long)[res count]);
+    
+    NSLog(@"Notes restants: %@", res);
+    
+    
+    //desar
+    
+    [self.stack saveWithErrorBlock:^(NSError *error) {
+        NSLog(@"ERror al desar: %@" , err);
+    }];
+
+}
+
 @end
+
+
+
+
+
+
+
+
+
+

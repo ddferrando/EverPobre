@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD320E061A80D7110070954B /* DVDCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AD320E051A80D7110070954B /* DVDCoreDataStack.m */; };
 		ADDC3CF01A7F9183003CD3FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3CEF1A7F9183003CD3FB /* main.m */; };
 		ADDC3CF31A7F9183003CD3FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC3CF21A7F9183003CD3FB /* AppDelegate.m */; };
 		ADDC3CF51A7F9183003CD3FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDC3CF41A7F9183003CD3FB /* Images.xcassets */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD320E041A80D7110070954B /* DVDCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDCoreDataStack.h; sourceTree = "<group>"; };
+		AD320E051A80D7110070954B /* DVDCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDCoreDataStack.m; sourceTree = "<group>"; };
 		ADDC3CEA1A7F9183003CD3FB /* EverPobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverPobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDC3CEE1A7F9183003CD3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADDC3CEF1A7F9183003CD3FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,10 +104,10 @@
 			children = (
 				ADDC3CF11A7F9183003CD3FB /* AppDelegate.h */,
 				ADDC3CF21A7F9183003CD3FB /* AppDelegate.m */,
+				ADDC3D101A7F9595003CD3FB /* Models */,
 				ADDC3CF41A7F9183003CD3FB /* Images.xcassets */,
 				ADDC3CF61A7F9183003CD3FB /* LaunchScreen.xib */,
 				ADDC3CED1A7F9183003CD3FB /* Supporting Files */,
-				ADDC3D101A7F9595003CD3FB /* Models */,
 			);
 			path = EverPobre;
 			sourceTree = "<group>";
@@ -138,6 +141,8 @@
 		ADDC3D101A7F9595003CD3FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AD320E041A80D7110070954B /* DVDCoreDataStack.h */,
+				AD320E051A80D7110070954B /* DVDCoreDataStack.m */,
 				ADDC3D0D1A7F957C003CD3FB /* Model.xcdatamodeld */,
 				ADDC3D3F1A7FABDC003CD3FB /* CoreData_Machina */,
 				ADDC3D331A7FAB5B003CD3FB /* DVDNote.h */,
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD320E061A80D7110070954B /* DVDCoreDataStack.m in Sources */,
 				ADDC3D3E1A7FAB5B003CD3FB /* DVDPhotoContainer.m in Sources */,
 				ADDC3D391A7FAB5B003CD3FB /* _DVDNote.m in Sources */,
 				ADDC3CF31A7F9183003CD3FB /* AppDelegate.m in Sources */,
