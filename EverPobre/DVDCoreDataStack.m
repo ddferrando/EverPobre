@@ -176,14 +176,33 @@
         
     }else if (self.context.hasChanges) {
         if (![self.context save:&err]) {
-            errorBlock(err);
+            if(errorBlock != nil){
+                errorBlock (err);
+            }
         }
     }
     
 }
 
-
-
+//search
+-(NSArray *) executeFetchRequest:(NSFetchRequest *)req errorBlock:(void(^)(NSError *error))errorBlock{
+    
+    NSError *err;
+    NSArray *res = [self.context executeFetchRequest:req
+                                               error:&err];
+    
+    //comprovem que no hi hagi hagurt cap error en la cerca. 1 que res sigui diferent de nil 2. que l'error no sigui nil, ja que si ho ñés no és un error
+    if (res == nil) {
+        if(errorBlock != nil){
+            errorBlock (err);
+        }
+    }
+    
+    
+    
+    return res;
+    
+}
 
 -(void) laPolla{
     
