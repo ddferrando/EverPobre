@@ -10,6 +10,7 @@
 #import "DVDNotebook.h"
 #import "DVDNotesViewController.h"
 #import "DVDNote.h"
+#import "DVDNoteTableViewCell.h"
 
 @interface DVDNoteBooksViewController ()
 
@@ -28,9 +29,21 @@
                                                                                  target:self
                                                                                  action:@selector(addNoteBook:)];
     self.navigationItem.rightBarButtonItem = rightButton;
-    
-   
 }
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    //registrem la cel·la
+    UINib *nbNib = [UINib nibWithNibName:@"DVDNoteTableViewCell" bundle:nil];
+    [self.tableView registerNib:nbNib forCellReuseIdentifier:[DVDNoteTableViewCell cellId]];
+    
+    self.tableView.rowHeight=[DVDNoteTableViewCell cellHeight];
+    
+    //eliminem les línies de separació
+    self.tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -45,26 +58,23 @@
     //Esbrinem de quina llibreria ens  parlen
     DVDNotebook *nb =[self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    //ReuseId  --> definim la cel·la per poder-la reutilitzar
-    static NSString *cellId = @"NoteBookCell";
-    
-    //creem una cel·la
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    
-    if (cell == nil) {
+
+    //creem la cel·la personalitzada
+    DVDNoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[DVDNoteTableViewCell cellId]];
+    /*if (cell == nil) {
         //hem de crear la cel·la a pèl
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
-    }
+        cell = [tableView dequeueReusableCellWithIdentifier:[DVDNoteTableViewCell cellId]];
+    }*/
     
     //sincronitzem la cel·la i el model
+    cell.title.text = nb.name;
+    cell.numNotes.text=[NSString stringWithFormat:@"Nombre de notes: %lu",(unsigned long)[nb.notes count]];
     
-    cell.textLabel.text = nb.name;
-    
-    NSDateFormatter *fmt = [NSDateFormatter new];
+   /* NSDateFormatter *fmt = [NSDateFormatter new];
     fmt.dateStyle = NSDateFormatterShortStyle;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%lu notes)",
                                  [fmt stringFromDate:nb.modificationDate],
-                                 (unsigned long)nb.notes.count];
+                                 (unsigned long)nb.notes.count];*/
     
     //retornem la cel·la configurada amb les vistes i el model
     return cell;
@@ -132,10 +142,16 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
 #pragma mark - actions
 
 -(void) addNoteBook:(id) sender {
+    //
     
-    //creem una llibreta
     
-    [DVDNotebook noteBookWithName:@"Llibreta 2" context:self.fetchedResultsController.managedObjectContext];
+    //- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+    int numNb = (int)[self.tableView numberOfRowsInSection:0] + 1;
+    
+    //DVDNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSString *nameNB = [NSString stringWithFormat:@"Llibreta %lu", (unsigned long)numNb];
+    
+    [DVDNotebook noteBookWithName:nameNB context:self.fetchedResultsController.managedObjectContext];
 }
 
 

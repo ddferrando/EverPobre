@@ -31,7 +31,7 @@
     self.stack = [DVDCoreDataStack coreDataStackWithModelName:@"Model"];
     
     //crea dades de testeig
-    [self createDummyData];
+    //[self createDummyData];
     
     
     //això era per anar fent proves

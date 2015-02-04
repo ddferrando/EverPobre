@@ -25,9 +25,6 @@
                                                                                  action:@selector(addNote:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     
-    
-  
-    
 }
                   
 -(void)viewWillAppear:(BOOL)animated{
@@ -54,6 +51,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
     }
     
+    
     //sincronitzem la cel·la i el model
     
     cell.textLabel.text = note.name;
@@ -61,7 +59,7 @@
     NSDateFormatter *fmt = [NSDateFormatter new];
     fmt.dateStyle = NSDateFormatterShortStyle;
     cell.imageView.image = note.photo.image;
-    cell.textLabel.text = note .name;
+    cell.textLabel.text = note.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ ",
                                  [fmt stringFromDate:note.modificationDate]];
     
@@ -102,8 +100,9 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
     //DVDNotebook *nb = [self.fetchedResultsController.managedObjectContext ob];
     
     //creem una llibreta
-    
-    [DVDNote noteWithName:@"Nota nova" notebook:self.noteBook context:self.fetchedResultsController.managedObjectContext];
+    [DVDNote noteWithName:@"Nota nova"
+                 notebook:self.noteBook
+                  context:self.fetchedResultsController.managedObjectContext];
 }
 
 @end
