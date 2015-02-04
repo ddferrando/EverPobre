@@ -181,7 +181,6 @@
             }
         }
     }
-    
 }
 
 //search
@@ -198,10 +197,7 @@
         }
     }
     
-    
-    
     return res;
-    
 }
 
 -(void) laPolla{
@@ -209,13 +205,11 @@
     // Automagically do light migrations
     NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption: @YES,                                         NSInferMappingModelAutomaticallyOption : @YES} ;
     
-    
     [_storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                     configuration:nil
                                               URL:self.dbURL
                                           options:options
                                             error:nil ];
-
 }
 
 

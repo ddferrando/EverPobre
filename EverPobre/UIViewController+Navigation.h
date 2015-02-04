@@ -10,4 +10,6 @@
 
 @interface UIViewController (Navigation)
 
+-(UINavigationController *) dvdWrappedNavigation;
+
 @end

@@ -10,4 +10,14 @@
 
 @implementation UIViewController (Navigation)
 
+-(UINavigationController *) dvdWrappedNavigation{
+    
+    UINavigationController *nav = [UINavigationController new];
+    [nav pushViewController:self
+                   animated:NO];
+    
+    return nav;
+    
+}
+
 @end

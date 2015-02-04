@@ -11,6 +11,8 @@
 #import "DVDNote.h"
 #import "DVDNotebook.h"
 #import "DVDPhotoContainer.h"
+#import "DVDNoteBooksViewController.h"
+#import "UIViewController+Navigation.h"
 
 @interface AppDelegate ()
 
@@ -22,15 +24,50 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    //creem l'stack
-    self.stack = [DVDCoreDataStack coreDataStackWithModelName:@"Model"];
-    [self createDummyData];
-    
-    [self trastearConDatos];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //creem l'stack
+    self.stack = [DVDCoreDataStack coreDataStackWithModelName:@"Model"];
+    
+    //crea dades de testeig
+    [self createDummyData];
+    
+    
+    //això era per anar fent proves
+    //[self trastearConDatos];
+    
+    //creem el fetchRequest
+    NSFetchRequest *r = [NSFetchRequest fetchRequestWithEntityName:[DVDNotebook entityName]];
+    r.fetchBatchSize = 30;
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DVDNoteAttributes.name
+                                                        ascending:YES
+                                                         selector:@selector(caseInsensitiveCompare:)],
+                          [NSSortDescriptor sortDescriptorWithKey:DVDNoteAttributes.modificationDate
+                                                        ascending:NO]];
+    
+    //sectionNameKeyPath == les claus per les que podem organitzar les seccions de les taules
+    NSFetchedResultsController * fc = [[NSFetchedResultsController alloc] initWithFetchRequest:r
+                                                                          managedObjectContext:self.stack.context
+                                                                            sectionNameKeyPath:nil
+                                                                                     cacheName:nil];
+    
+    //crem el controlador
+    DVDNoteBooksViewController *nbVC = [[DVDNoteBooksViewController alloc] initWithFetchedResultsController:fc
+                                                                                                      style:UITableViewStylePlain];
+    
+    //Creem el NavigationviewControler
+    //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:nbVC];
+    
+    
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    //self.window.rootViewController = nav;
+    
+    //fem servir una categoria per crear el elmateix que en les dues instruccions coemntades anteriorment
+    self.window.rootViewController = [nbVC dvdWrappedNavigation];
+    
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

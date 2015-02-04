@@ -1,5 +1,5 @@
 //
-//  DVDNoteBooksViewController.h
+//  DVDNotesViewController.h
 //  EverPobre
 //
 //  Created by david martínez ferrando on 4/2/15.
@@ -7,11 +7,10 @@
 //
 
 #import "AGTCoreDataTableViewController.h"
+#import "DVDNotebook.h"
 
-@interface DVDNoteBooksViewController : AGTCoreDataTableViewController
+@interface DVDNotesViewController : AGTCoreDataTableViewController
 
-
-
-
+@property (strong, nonatomic) DVDNotebook *noteBook;
 
 @end
