@@ -17,28 +17,44 @@
                         <rect key="frame" x="8" y="8" width="304" height="104.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I92-NL-Uvl">
-                        <rect key="frame" x="33" y="26" width="258" height="44"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
-                        <color key="textColor" red="0.0" green="0.023288809163261794" blue="0.63638336489898983" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
-                        <color key="shadowColor" red="0.96788522329735094" green="0.98054038457917914" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <size key="shadowOffset" width="1" height="1"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numNotes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PVx-uz-dFk">
                         <rect key="frame" x="34" y="79" width="258" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="14"/>
                         <color key="textColor" red="0.38673847853535348" green="0.38673847853535348" blue="0.38673847853535348" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
-                        <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="shadowColor" red="0.88813920454545459" green="0.88813920454545459" blue="0.88813920454545459" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <size key="shadowOffset" width="1" height="1"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I92-NL-Uvl">
+                        <rect key="frame" x="33" y="26" width="258" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
+                        <color key="textColor" red="0.0" green="0.013472811104430925" blue="0.3681541982323232" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="shadowColor" red="0.94027391425205475" green="0.95256805589977778" blue="0.97147253787878785" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="shadowOffset" width="1" height="1"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cjw-3E-HOX">
+                        <rect key="frame" x="34" y="65" width="49" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" red="0.12415167297979801" green="0.12415167297979801" blue="0.12415167297979801" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modificated:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fbh-Ui-B9h">
+                        <rect key="frame" x="34" y="79" width="68" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" red="0.124151673" green="0.124151673" blue="0.124151673" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="creationDate" destination="Cjw-3E-HOX" id="0gx-hl-rzl"/>
                 <outlet property="imgBackGround" destination="XuG-ZS-AiD" id="IOu-oV-JRD"/>
+                <outlet property="modificationDate" destination="Fbh-Ui-B9h" id="ZCL-Sk-y0s"/>
                 <outlet property="numNotes" destination="PVx-uz-dFk" id="Kov-lt-UtS"/>
                 <outlet property="title" destination="I92-NL-Uvl" id="jXF-77-INf"/>
             </connections>
@@ -46,7 +62,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="libretaBg.png" width="556" height="259"/>
+        <image name="libretaBg.png" width="559" height="264"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

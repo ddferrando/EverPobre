@@ -16,7 +16,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *title;
 
+@property (weak, nonatomic) IBOutlet UILabel *creationDate;
+
+@property (weak, nonatomic) IBOutlet UILabel *modificationDate;
+
 +(NSString *) cellId;
+
 +(CGFloat) cellHeight;
 
 -(id) init;

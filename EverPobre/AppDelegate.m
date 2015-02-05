@@ -27,11 +27,11 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    //creem l'stack
+    //creem l'stack passant com a nom el del model que hem creat Model.xcdatamodeld
     self.stack = [DVDCoreDataStack coreDataStackWithModelName:@"Model"];
     
     //crea dades de testeig
-    //[self createDummyData];
+    [self createDummyData];
     
     
     //això era per anar fent proves

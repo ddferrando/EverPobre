@@ -11,6 +11,7 @@
 #import "DVDNote.h"
 #import "DVDPhotoContainer.h"
 #import "DVDNotebook.h"
+#import "DVDNoteViewController.h"
 
 @implementation DVDNotesViewController
 
@@ -104,5 +105,24 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
                  notebook:self.noteBook
                   context:self.fetchedResultsController.managedObjectContext];
 }
+
+#pragma mark - Delegate
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //esbrinem quina és la llibreta
+    DVDNote  *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    //recuperem el VC del detall
+    DVDNoteViewController *noteVC = [[DVDNoteViewController alloc] initWithModel:nb];
+    
+    //Li assignem la nota
+    [noteVC setNote:nb];
+    
+    //Fem el push
+    [self.navigationController pushViewController:noteVC animated:YES];
+
+
+}
+
 
 @end

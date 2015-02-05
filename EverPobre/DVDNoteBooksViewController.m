@@ -11,7 +11,7 @@
 #import "DVDNotesViewController.h"
 #import "DVDNote.h"
 #import "DVDNoteTableViewCell.h"
-
+#import "DVDNoteViewController.h"
 @interface DVDNoteBooksViewController ()
 
 @end
@@ -31,6 +31,8 @@
     self.navigationItem.rightBarButtonItem = rightButton;
 }
 
+
+
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -38,7 +40,6 @@
     UINib *nbNib = [UINib nibWithNibName:@"DVDNoteTableViewCell" bundle:nil];
     [self.tableView registerNib:nbNib forCellReuseIdentifier:[DVDNoteTableViewCell cellId]];
     
-    self.tableView.rowHeight=[DVDNoteTableViewCell cellHeight];
     
     //eliminem les línies de separació
     self.tableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
@@ -53,6 +54,11 @@
 
 //Fent servir les classes del Fernando aquest és l´únic métode que hem d'implementar la resta la tenim implementada en el moment que instanciem aquesta classe (en l'AppDelegat en aquest cas) 
 #pragma mark - TabelViewDelegates
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return
+    self.tableView.rowHeight=[DVDNoteTableViewCell cellHeight];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //Esbrinem de quina llibreria ens  parlen
@@ -61,29 +67,26 @@
 
     //creem la cel·la personalitzada
     DVDNoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[DVDNoteTableViewCell cellId]];
-    /*if (cell == nil) {
-        //hem de crear la cel·la a pèl
-        cell = [tableView dequeueReusableCellWithIdentifier:[DVDNoteTableViewCell cellId]];
-    }*/
+    
     
     //sincronitzem la cel·la i el model
     cell.title.text = nb.name;
-    cell.numNotes.text=[NSString stringWithFormat:@"Nombre de notes: %lu",(unsigned long)[nb.notes count]];
+    cell.numNotes.text=[NSString stringWithFormat:@"Nombre de notes: %lu",[nb.notes count]];
     
-   /* NSDateFormatter *fmt = [NSDateFormatter new];
+    NSDateFormatter *fmt = [NSDateFormatter new];
     fmt.dateStyle = NSDateFormatterShortStyle;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%lu notes)",
-                                 [fmt stringFromDate:nb.modificationDate],
-                                 (unsigned long)nb.notes.count];*/
+    cell.modificationDate.text = [NSString stringWithFormat:@"Modificada: %@ ",
+                                 [fmt stringFromDate:nb.modificationDate]];
+                                  
+    cell.creationDate.text = [NSString stringWithFormat:@"Creada: %@ ",
+                              [fmt stringFromDate:nb.modificationDate]];
     
     //retornem la cel·la configurada amb les vistes i el model
     return cell;
 }
 
 //Permetre l'eliminació
--(void) tableView:(UITableView *)tableView
-commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-forRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle) editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
         //Borrem la llibreta. Primer recuperem el context i
@@ -106,6 +109,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
 
 
 #pragma mark - Delegate
+
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //esbrinem quina és la llibreta
@@ -127,22 +131,43 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
                                                                            sectionNameKeyPath:nil
                                                                                     cacheName:nil];
 
-    //Creem instancia del controlador de notes
-    DVDNotesViewController * nVC = [[DVDNotesViewController alloc] initWithFetchedResultsController:fc
-                                                                                              style:UITableViewStylePlain];
+    //recuperem les notes
+    DVDNotesViewController * nVC = [[DVDNotesViewController alloc] initWithFetchedResultsController:fc style:UITableViewStylePlain];
     
-    
+    //l'assignem
     [nVC setNoteBook:nb];
+    
     
     //li fem el push
     [self.navigationController pushViewController:nVC animated:YES];
 }
 
 
-#pragma mark - actions
 
+
+#pragma mark - actions
 -(void) addNoteBook:(id) sender {
     //
+    
+    
+    // *** opció 1
+    //aquí afegim la llibreta fent un push al navigation i mostrant el ViewController (que és una taula) del detall de la llibreta
+    
+    
+    //NSArray *arr = @[@"Nom", @"img"];
+    //creem el ViewController del detall de la Llibreta passant-li el fetchRequest
+    //DVDNoteBookDetailViewController *nbDetailVC = [[DVDNoteBookDetailViewController alloc] initWithArray:arr];
+    
+    //fem el push
+    /*[self.navigationController pushViewController:nbDetailVC animated:YES];
+    
+    
+    nbDetailVC.nb = arr;
+     */
+    
+    
+    // **** opció 2
+    //aquí afegim la nova llibreta directament a la taula
     
     
     //- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -152,6 +177,17 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *nameNB = [NSString stringWithFormat:@"Llibreta %lu", (unsigned long)numNb];
     
     [DVDNotebook noteBookWithName:nameNB context:self.fetchedResultsController.managedObjectContext];
+     
+    
+    // *** opció 3
+    
+    //iniciem el
+    //DVDNoteViewController *nbVC = [[DVDNoteViewController alloc] initWithModel:<#(DVDNote *)#>];
+    
+    //fem el push
+    //[self.navigationController pushViewController:nbDetailVC animated:YES];
+    
+    
 }
 
 

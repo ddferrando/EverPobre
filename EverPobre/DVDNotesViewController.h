@@ -11,6 +11,8 @@
 
 @interface DVDNotesViewController : AGTCoreDataTableViewController
 
+
+//per saber a quina llibreta pertany la nota
 @property (strong, nonatomic) DVDNotebook *noteBook;
 
 @end

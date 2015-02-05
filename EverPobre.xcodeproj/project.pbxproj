@@ -26,10 +26,20 @@
 		ADF3D7DD1A822A1000E13705 /* AGTCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D7DC1A822A1000E13705 /* AGTCoreDataCollectionViewController.m */; };
 		ADF3D7E01A823E2700E13705 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D7DF1A823E2700E13705 /* UIViewController+Navigation.m */; };
 		ADF3D7E41A82437400E13705 /* DVDNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D7E31A82437400E13705 /* DVDNotesViewController.m */; };
-		ADF3D7E71A8252DE00E13705 /* DVDNoteDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D7E61A8252DE00E13705 /* DVDNoteDetail.m */; };
 		ADF3D7ED1A828FE200E13705 /* DVDNoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D7EB1A828FE200E13705 /* DVDNoteTableViewCell.m */; };
 		ADF3D7EE1A828FE200E13705 /* DVDNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF3D7EC1A828FE200E13705 /* DVDNoteTableViewCell.xib */; };
-		ADF3D7F61A82AD9300E13705 /* libretaBg.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF3D7F51A82AD9300E13705 /* libretaBg.png */; };
+		ADF3D8011A82D82A00E13705 /* libretaBg.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF3D8001A82D82A00E13705 /* libretaBg.png */; };
+		ADF3D8061A83782100E13705 /* DVDPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D8041A83782100E13705 /* DVDPhotoTableViewCell.m */; };
+		ADF3D8071A83782100E13705 /* DVDPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF3D8051A83782100E13705 /* DVDPhotoTableViewCell.xib */; };
+		ADF3D80B1A83794A00E13705 /* DVDTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D8091A83794A00E13705 /* DVDTextTableViewCell.m */; };
+		ADF3D80C1A83794A00E13705 /* DVDTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF3D80A1A83794A00E13705 /* DVDTextTableViewCell.xib */; };
+		ADF3D8101A837B1100E13705 /* DVDDatesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D80E1A837B1100E13705 /* DVDDatesTableViewCell.m */; };
+		ADF3D8111A837B1100E13705 /* DVDDatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF3D80F1A837B1100E13705 /* DVDDatesTableViewCell.xib */; };
+		ADF3D8151A837C0000E13705 /* DVDNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D8131A837C0000E13705 /* DVDNameTableViewCell.m */; };
+		ADF3D8161A837C0000E13705 /* DVDNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF3D8141A837C0000E13705 /* DVDNameTableViewCell.xib */; };
+		ADF3D8191A837D8F00E13705 /* DVDNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D8181A837D8F00E13705 /* DVDNoteViewController.m */; };
+		ADF3D81D1A83A76B00E13705 /* DVDPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF3D81B1A83A76B00E13705 /* DVDPhotoViewController.m */; };
+		ADF3D81E1A83A76B00E13705 /* DVDPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF3D81C1A83A76B00E13705 /* DVDPhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,12 +90,27 @@
 		ADF3D7DF1A823E2700E13705 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
 		ADF3D7E21A82437400E13705 /* DVDNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDNotesViewController.h; sourceTree = "<group>"; };
 		ADF3D7E31A82437400E13705 /* DVDNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDNotesViewController.m; sourceTree = "<group>"; };
-		ADF3D7E51A8252DE00E13705 /* DVDNoteDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDNoteDetail.h; sourceTree = "<group>"; };
-		ADF3D7E61A8252DE00E13705 /* DVDNoteDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDNoteDetail.m; sourceTree = "<group>"; };
 		ADF3D7EA1A828FE200E13705 /* DVDNoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDNoteTableViewCell.h; sourceTree = "<group>"; };
 		ADF3D7EB1A828FE200E13705 /* DVDNoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDNoteTableViewCell.m; sourceTree = "<group>"; };
 		ADF3D7EC1A828FE200E13705 /* DVDNoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDNoteTableViewCell.xib; sourceTree = "<group>"; };
-		ADF3D7F51A82AD9300E13705 /* libretaBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libretaBg.png; sourceTree = "<group>"; };
+		ADF3D8001A82D82A00E13705 /* libretaBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libretaBg.png; sourceTree = "<group>"; };
+		ADF3D8031A83782100E13705 /* DVDPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDPhotoTableViewCell.h; sourceTree = "<group>"; };
+		ADF3D8041A83782100E13705 /* DVDPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDPhotoTableViewCell.m; sourceTree = "<group>"; };
+		ADF3D8051A83782100E13705 /* DVDPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		ADF3D8081A83794A00E13705 /* DVDTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDTextTableViewCell.h; sourceTree = "<group>"; };
+		ADF3D8091A83794A00E13705 /* DVDTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDTextTableViewCell.m; sourceTree = "<group>"; };
+		ADF3D80A1A83794A00E13705 /* DVDTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDTextTableViewCell.xib; sourceTree = "<group>"; };
+		ADF3D80D1A837B1100E13705 /* DVDDatesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDDatesTableViewCell.h; sourceTree = "<group>"; };
+		ADF3D80E1A837B1100E13705 /* DVDDatesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDDatesTableViewCell.m; sourceTree = "<group>"; };
+		ADF3D80F1A837B1100E13705 /* DVDDatesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDDatesTableViewCell.xib; sourceTree = "<group>"; };
+		ADF3D8121A837C0000E13705 /* DVDNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDNameTableViewCell.h; sourceTree = "<group>"; };
+		ADF3D8131A837C0000E13705 /* DVDNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDNameTableViewCell.m; sourceTree = "<group>"; };
+		ADF3D8141A837C0000E13705 /* DVDNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDNameTableViewCell.xib; sourceTree = "<group>"; };
+		ADF3D8171A837D8F00E13705 /* DVDNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDNoteViewController.h; sourceTree = "<group>"; };
+		ADF3D8181A837D8F00E13705 /* DVDNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDNoteViewController.m; sourceTree = "<group>"; };
+		ADF3D81A1A83A76B00E13705 /* DVDPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDPhotoViewController.h; sourceTree = "<group>"; };
+		ADF3D81B1A83A76B00E13705 /* DVDPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDPhotoViewController.m; sourceTree = "<group>"; };
+		ADF3D81C1A83A76B00E13705 /* DVDPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDPhotoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +152,11 @@
 		ADDC3CEC1A7F9183003CD3FB /* EverPobre */ = {
 			isa = PBXGroup;
 			children = (
-				ADF3D7F51A82AD9300E13705 /* libretaBg.png */,
+				ADF3D8001A82D82A00E13705 /* libretaBg.png */,
 				ADDC3CF11A7F9183003CD3FB /* AppDelegate.h */,
 				ADDC3CF21A7F9183003CD3FB /* AppDelegate.m */,
 				ADF3D7D51A821F8C00E13705 /* Controllers */,
+				ADF3D8021A83675A00E13705 /* Views */,
 				ADDC3D101A7F9595003CD3FB /* Models */,
 				ADF3D7E11A823E2C00E13705 /* Categories */,
 				ADDC3CF41A7F9183003CD3FB /* Images.xcassets */,
@@ -204,11 +230,11 @@
 				ADF3D7D71A82207A00E13705 /* DVDNoteBooksViewController.m */,
 				ADF3D7E21A82437400E13705 /* DVDNotesViewController.h */,
 				ADF3D7E31A82437400E13705 /* DVDNotesViewController.m */,
-				ADF3D7E51A8252DE00E13705 /* DVDNoteDetail.h */,
-				ADF3D7E61A8252DE00E13705 /* DVDNoteDetail.m */,
-				ADF3D7EA1A828FE200E13705 /* DVDNoteTableViewCell.h */,
-				ADF3D7EB1A828FE200E13705 /* DVDNoteTableViewCell.m */,
-				ADF3D7EC1A828FE200E13705 /* DVDNoteTableViewCell.xib */,
+				ADF3D8171A837D8F00E13705 /* DVDNoteViewController.h */,
+				ADF3D8181A837D8F00E13705 /* DVDNoteViewController.m */,
+				ADF3D81A1A83A76B00E13705 /* DVDPhotoViewController.h */,
+				ADF3D81B1A83A76B00E13705 /* DVDPhotoViewController.m */,
+				ADF3D81C1A83A76B00E13705 /* DVDPhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +259,28 @@
 				AD320E051A80D7110070954B /* DVDCoreDataStack.m */,
 			);
 			name = Model_utils;
+			sourceTree = "<group>";
+		};
+		ADF3D8021A83675A00E13705 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADF3D7EA1A828FE200E13705 /* DVDNoteTableViewCell.h */,
+				ADF3D7EB1A828FE200E13705 /* DVDNoteTableViewCell.m */,
+				ADF3D7EC1A828FE200E13705 /* DVDNoteTableViewCell.xib */,
+				ADF3D8031A83782100E13705 /* DVDPhotoTableViewCell.h */,
+				ADF3D8041A83782100E13705 /* DVDPhotoTableViewCell.m */,
+				ADF3D8051A83782100E13705 /* DVDPhotoTableViewCell.xib */,
+				ADF3D8081A83794A00E13705 /* DVDTextTableViewCell.h */,
+				ADF3D8091A83794A00E13705 /* DVDTextTableViewCell.m */,
+				ADF3D80A1A83794A00E13705 /* DVDTextTableViewCell.xib */,
+				ADF3D80D1A837B1100E13705 /* DVDDatesTableViewCell.h */,
+				ADF3D80E1A837B1100E13705 /* DVDDatesTableViewCell.m */,
+				ADF3D80F1A837B1100E13705 /* DVDDatesTableViewCell.xib */,
+				ADF3D8121A837C0000E13705 /* DVDNameTableViewCell.h */,
+				ADF3D8131A837C0000E13705 /* DVDNameTableViewCell.m */,
+				ADF3D8141A837C0000E13705 /* DVDNameTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,8 +364,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADF3D7F61A82AD9300E13705 /* libretaBg.png in Resources */,
+				ADF3D8071A83782100E13705 /* DVDPhotoTableViewCell.xib in Resources */,
+				ADF3D8011A82D82A00E13705 /* libretaBg.png in Resources */,
 				ADDC3CF81A7F9183003CD3FB /* LaunchScreen.xib in Resources */,
+				ADF3D8161A837C0000E13705 /* DVDNameTableViewCell.xib in Resources */,
+				ADF3D80C1A83794A00E13705 /* DVDTextTableViewCell.xib in Resources */,
+				ADF3D8111A837B1100E13705 /* DVDDatesTableViewCell.xib in Resources */,
+				ADF3D81E1A83A76B00E13705 /* DVDPhotoViewController.xib in Resources */,
 				ADF3D7EE1A828FE200E13705 /* DVDNoteTableViewCell.xib in Resources */,
 				ADDC3CF51A7F9183003CD3FB /* Images.xcassets in Resources */,
 			);
@@ -339,20 +392,25 @@
 			files = (
 				AD320E061A80D7110070954B /* DVDCoreDataStack.m in Sources */,
 				ADDC3D3E1A7FAB5B003CD3FB /* DVDPhotoContainer.m in Sources */,
-				ADF3D7E71A8252DE00E13705 /* DVDNoteDetail.m in Sources */,
 				ADF3D7D41A821F8700E13705 /* AGTCoreDataTableViewController.m in Sources */,
+				ADF3D8061A83782100E13705 /* DVDPhotoTableViewCell.m in Sources */,
+				ADF3D8191A837D8F00E13705 /* DVDNoteViewController.m in Sources */,
 				ADDC3D391A7FAB5B003CD3FB /* _DVDNote.m in Sources */,
 				ADDC3CF31A7F9183003CD3FB /* AppDelegate.m in Sources */,
 				ADDC3D501A8022A6003CD3FB /* DVDMyManagedObject.m in Sources */,
 				ADF3D7E01A823E2700E13705 /* UIViewController+Navigation.m in Sources */,
 				ADDC3CF01A7F9183003CD3FB /* main.m in Sources */,
 				ADDC3D3B1A7FAB5B003CD3FB /* _DVDPhotoContainer.m in Sources */,
+				ADF3D80B1A83794A00E13705 /* DVDTextTableViewCell.m in Sources */,
 				ADF3D7E41A82437400E13705 /* DVDNotesViewController.m in Sources */,
 				ADF3D7DD1A822A1000E13705 /* AGTCoreDataCollectionViewController.m in Sources */,
 				ADDC3D3A1A7FAB5B003CD3FB /* _DVDNotebook.m in Sources */,
+				ADF3D81D1A83A76B00E13705 /* DVDPhotoViewController.m in Sources */,
 				ADDC3D3C1A7FAB5B003CD3FB /* DVDNote.m in Sources */,
 				ADF3D7D91A82207A00E13705 /* DVDNoteBooksViewController.m in Sources */,
 				ADDC3D0F1A7F957C003CD3FB /* Model.xcdatamodeld in Sources */,
+				ADF3D8101A837B1100E13705 /* DVDDatesTableViewCell.m in Sources */,
+				ADF3D8151A837C0000E13705 /* DVDNameTableViewCell.m in Sources */,
 				ADF3D7ED1A828FE200E13705 /* DVDNoteTableViewCell.m in Sources */,
 				ADDC3D3D1A7FAB5B003CD3FB /* DVDNotebook.m in Sources */,
 			);
