@@ -39,8 +39,10 @@
 
 -(void) viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    
-    self.model.photo.image = self.photoView.image;
+    if (self.photoView.image) {
+        
+        self.model.photo.image = self.photoView.image;
+    }
     
 }
 

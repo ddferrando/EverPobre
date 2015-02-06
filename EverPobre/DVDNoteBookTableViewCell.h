@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 david martínez ferrando. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-@interface DVDNoteTableViewCell : UITableViewCell
+@interface DVDNoteBookTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgBackGround;
 

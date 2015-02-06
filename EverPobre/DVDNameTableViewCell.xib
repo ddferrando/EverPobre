@@ -13,15 +13,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" id="wFP-Un-3Pu">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" id="wFP-Un-3Pu">
                         <rect key="frame" x="8" y="7" width="304" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet" keyboardAppearance="alert"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="URL" keyboardAppearance="alert"/>
                     </textField>
                 </subviews>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.95626183712121215" green="0.95626183712121215" blue="0.95626183712121215" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="nameField" destination="wFP-Un-3Pu" id="EHY-ps-Hwc"/>
             </connections>

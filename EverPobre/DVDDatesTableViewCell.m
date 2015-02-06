@@ -15,14 +15,16 @@
     //desem la nota
     _note = note;
     
+    //[self syncNoteWithView];
     //observem les propietatsde la nota
     //i actualitzem la data del modification date
     [self.note addObserver:self
                 forKeyPath:DVDNoteAttributes.modificationDate
                    options:0
                    context:NULL];
+    //sincronitzem el nou valor de modificationDate
+    //[self syncNoteWithView];
 }
-
 
 #pragma mark - Class Methods
 +(NSString *) cellId{
@@ -30,7 +32,7 @@
 }
 
 +(CGFloat) cellHeight{
-    return 44.0f;
+    return 45.0f;
 }
 
 #pragma mark - KVO
@@ -42,21 +44,36 @@
                    forKeyPath:DVDNoteAttributes.modificationDate];
 }
 
--(void) addObserver:(NSObject *)observer
-         forKeyPath:(NSString *)keyPath
-            options:(NSKeyValueObservingOptions)options
-            context:(void *)context{
+-(void) observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context{
     
     //sincronitzem el nou valor de modificationDate
     [self syncNoteWithView];
 }
 
 -(void)syncNoteWithView{
-    NSDateFormatter *fmt = [NSDateFormatter new];
-    fmt.dateStyle = NSDateFormatterShortStyle;
-    self.creationDate.text = [fmt stringFromDate:self.note.creationDate];
+//    NSDateFormatter *fmtDay = [NSDateFormatter new];
+//    fmtDay.dateStyle = NSDateFormatterShortStyle;
+//    NSDateFormatter *fmtTime = [NSDateFormatter new];
+//   // fmtTime.timeStyle = NSDateFormatterLongStyle;
+//   // [fmtTime setDateFormat:@"hh:mm:ss:mm"];
+//    [fmtTime setDateFormat:@"HH:mm:ss"];
+//    
+//    NSString *creationDate = [fmtDay stringFromDate:self.note.creationDate];
+//    NSString *creationTime = [fmtTime stringFromDate:self.note.creationDate];
     
-    self.modificationDate.text = [fmt stringFromDate:self.note.modificationDate];
+    
+    self.creationDate.text = [NSString stringWithFormat:@"Creat el dia: %@ a les %@",
+                              [[self formatedDateWithDate:self.note.creationDate] objectAtIndex:0],
+                              [[self formatedDateWithDate:self.note.creationDate] lastObject]];
+                               
+    
+    
+    self.modificationDate.text = [NSString stringWithFormat:@"Modificat el dia: %@ a les %@",
+                                  [[self formatedDateWithDate:self.note.modificationDate] objectAtIndex:0],
+                                  [[self formatedDateWithDate:self.note.modificationDate] lastObject]];
 }
 
 - (void)awakeFromNib {
@@ -67,6 +84,23 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(NSArray *) formatedDateWithDate:(NSDate *) date {
+    
+    NSDateFormatter *fmtDay = [NSDateFormatter new];
+    fmtDay.dateStyle = NSDateFormatterShortStyle;
+    NSDateFormatter *fmtTime = [NSDateFormatter new];
+    // fmtTime.timeStyle = NSDateFormatterLongStyle;
+    // [fmtTime setDateFormat:@"hh:mm:ss:mm"];
+    [fmtTime setDateFormat:@"HH:mm:ss"];
+    
+    NSString *dateFormat = [fmtDay stringFromDate:date];
+    NSString *timeFormat = [fmtTime stringFromDate:date];
+    
+    
+    return @[dateFormat, timeFormat];
+    
 }
 
 @end

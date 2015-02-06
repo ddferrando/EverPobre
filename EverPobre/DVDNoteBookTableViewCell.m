@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 david martínez ferrando. All rights reserved.
 //
 
-#import "DVDNoteTableViewCell.h"
+#import "DVDNoteBookTableViewCell.h"
 
-@implementation DVDNoteTableViewCell
+@implementation DVDNoteBookTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

@@ -6,10 +6,12 @@
 //  Copyright (c) 2015 david martínez ferrando. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+
 @class DVDNote;
 
-@interface DVDNoteViewController : UITableViewController
+@interface DVDNoteViewController : UITableViewController<UIAlertViewDelegate>
 
 
 @property (strong, nonatomic) DVDNote *note;

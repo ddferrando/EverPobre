@@ -99,7 +99,7 @@
 -(void) createDummyData{
     
     //primer eliminem totes les dades per que no se'ns vagin acumilant les dades
-    [self.stack zapAllData];
+    //[self.stack zapAllData];
     
     //creem una llibreta
     DVDNotebook *nb = [DVDNotebook noteBookWithName:@"Llibreta 1" context:self.stack.context];

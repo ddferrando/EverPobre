@@ -45,7 +45,7 @@
                         change:(NSDictionary *)change
                        context:(void *)context{
     
-    //aquí només ens interessa saebr que alguna cosa ha canviat
+    //aquí només ens interessa saber que alguna cosa ha canviat
     self.modificationDate = [NSDate date];
     
 }

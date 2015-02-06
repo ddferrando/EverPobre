@@ -8,10 +8,10 @@
 
 //constants
 #define NUMBER_OF_SECTIONS 4
-#define NAME_SECCTION_HEADER @"Name"
-#define DATES_SECTION_HEADER @"Created and last modified"
+#define NAME_SECCTION_HEADER @"Nom"
+#define DATES_SECTION_HEADER @"Creació i última modificació"
 #define TEXT_SECTION_HEADER @"Text"
-#define PHOTO_SECCTION_HEADER @"Photo"
+#define PHOTO_SECCTION_HEADER @"Foto"
 
 #define NAME_SECCTION 0
 #define DATES_SECTION 1
@@ -45,6 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = self.note.name;
    //registrem les vistes de les cel·les
     [self registerNibs];
 }
@@ -161,7 +162,10 @@
             break;
     }
     
-    
+    //refresquem la info
+    [self.tableView beginUpdates];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    [self.tableView endUpdates];
 }
 
 
@@ -191,9 +195,15 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    DVDPhotoViewController * pVC = [[DVDPhotoViewController alloc] initWithModel:self.note];
-    
-    [self.navigationController pushViewController:pVC animated:YES];
+    //si cliquem a la photo fem el push del container
+    if (indexPath.section  == PHOTO_SECCTION) {
+        
+        DVDPhotoViewController * pVC = [[DVDPhotoViewController alloc] initWithModel:self.note];
+        [self.navigationController pushViewController:pVC animated:YES];
+    }
 }
+
+
+
 
 @end

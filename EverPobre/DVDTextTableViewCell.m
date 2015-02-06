@@ -38,8 +38,9 @@
 -(void) prepareForReuse{
     [super prepareForReuse];
     
-    //desem les modificacions
+    //desem les modificacions 
     self.note.text = self.textView.text;
+   
     
 }
 

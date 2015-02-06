@@ -10,7 +10,7 @@
 #import "DVDNotebook.h"
 #import "DVDNotesViewController.h"
 #import "DVDNote.h"
-#import "DVDNoteTableViewCell.h"
+#import "DVDNoteBookTableViewCell.h"
 #import "DVDNoteViewController.h"
 @interface DVDNoteBooksViewController ()
 
@@ -37,8 +37,8 @@
     [super viewWillAppear:animated];
     
     //registrem la cel·la
-    UINib *nbNib = [UINib nibWithNibName:@"DVDNoteTableViewCell" bundle:nil];
-    [self.tableView registerNib:nbNib forCellReuseIdentifier:[DVDNoteTableViewCell cellId]];
+    UINib *nbNib = [UINib nibWithNibName:@"DVDNoteBookTableViewCell" bundle:nil];
+    [self.tableView registerNib:nbNib forCellReuseIdentifier:[DVDNoteBookTableViewCell cellId]];
     
     
     //eliminem les línies de separació
@@ -56,7 +56,7 @@
 #pragma mark - TabelViewDelegates
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return
-    self.tableView.rowHeight=[DVDNoteTableViewCell cellHeight];
+    self.tableView.rowHeight=[DVDNoteBookTableViewCell cellHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,7 +66,7 @@
     
 
     //creem la cel·la personalitzada
-    DVDNoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[DVDNoteTableViewCell cellId]];
+    DVDNoteBookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[DVDNoteBookTableViewCell cellId]];
     
     
     //sincronitzem la cel·la i el model

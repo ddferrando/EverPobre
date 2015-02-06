@@ -11,7 +11,7 @@
 @class DVDNote;
 
 
-@interface DVDNameTableViewCell : UITableViewCell
+@interface DVDNameTableViewCell : UITableViewCell< UITextFieldDelegate,UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) DVDNote *note;
